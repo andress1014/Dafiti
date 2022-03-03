@@ -3,10 +3,11 @@
 # Supone que en un repositorio GIT hiciste un commit y te olvidaste un archivo. Explicar como se soluciona si hiciste push, y como si aun no hiciste. De ser posible, buscar que quede solo un commit con los cambios.
 -Para cambiar el commit lo que se debe hacer es configurar el amend y luego usar el siguiente comando
 amend se debe configurar en la configuracion global de git con (git -g config)
+(Se agrega el nuevo archivo)
 ```
 git add . 
 ```
-(Se agrega el nuevo archivo)
+Se edita el commit
 ```
 git commit --amend
 ```

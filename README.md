@@ -38,7 +38,37 @@ ademas de que permite cargar de una manera asincrona y asi no tener que esperar 
 
 # Escribir una funcion que determine si un conjunto de cartas de una lista representan una escalera de poker (5 cartas con valores consecutivos) o no.
 ```
-Codigo fuente
+console.clear();
+//funcion isStraight
+const isStraight = (cartas) => {
+   let resultado = false;
+   //Tranformo la carta 14 en 1 para poder ordenarla
+   const tipoCartas = cartas.map((item) => (item === 14 ? 1 : item));
+   //Ordeno las cartas
+   const ordenado = tipoCartas.sort((a, b) => a - b);
+   // ciclo que valida si son consecutivos
+   if (cartas.length < 8) {
+      for (let i = 0; i < ordenado.length; i++) {
+         if (ordenado[i] < ordenado[i + 1]) {
+            resultado = true;
+         } else if (ordenado[i] === ordenado[ordenado.length - 1]) {
+            resultado = true;
+         } else {
+            resultado = false;
+            break;
+         }
+      }
+   } else {
+      resultado = false;
+   }
+    console.log(resultado);
+}
+
+isStraight([2, 3, 4, 5, 6]);
+isStraight([14, 5, 4, 2, 3]);
+isStraight([7, 7, 12, 11, 3, 4, 14]);
+isStraight([7, 3, 2]);
+
 ```
 
 # Cual es el jugador mas viejo

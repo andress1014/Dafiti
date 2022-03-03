@@ -37,7 +37,7 @@ git add .gitignore
 ademas de que permite cargar de una manera asincrona y asi no tener que esperar a que se cargue la libreria y detener otros modulos.
 
 # Escribir una funcion que determine si un conjunto de cartas de una lista representan una escalera de poker (5 cartas con valores consecutivos) o no.
-```
+```javascript
 console.clear();
 //funcion isStraight
 const isStraight = (cartas) => {
